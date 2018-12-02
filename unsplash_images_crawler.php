@@ -71,7 +71,7 @@ function _filterUrl($web_content, $key_word) {
 }
 
 /**
- * 将检测到的URL地址，通过编辑，修改其规格，并且将连接转换为可下载链接
+ * 将检测到的URL地址，通过编辑，修改其格式，并且将连接转换为可下载链接
  * @param  array $content_url 
  * @return array              修正后的URL数组
  */
@@ -154,9 +154,9 @@ function moveTargetFile($min_index, $key_word) {
 }
 
 /**
- * [initUrl description]
- * @param  [type] $key_word [description]
- * @return [type]           [description]
+ * 根据单词源初始化一个url地址
+ * @param  string $key_word 单词源
+ * @return string           需要抓取的URL
  */
 function initUrl($key_word){
 
