@@ -170,7 +170,7 @@ function initUrl($key_word){
  * 从本地文件读取数据
  * @return [type] [description]
  */
-function getWordsFromFile(){
+function crawlerGetWordsFromFile(){
 
 	$words_file = "words.txt";
 	$key_words = fopen($words_file, "r");
@@ -205,7 +205,7 @@ function getWordsFromFile(){
  * 从数据库获取数据
  * @return [type] [description]
  */
-function getWordsFromDB(){
+function crawlerGetWordsFromDB(){
 	$db_result = selectWords();
 	echo "Row count=" . $db_result->num_rows . "\n";
 
@@ -310,9 +310,9 @@ function writeURLStr($content_url, $file_name) {
  */
 function main() {
 	
-	getWordsFromFile();
+	crawlerGetWordsFromFile();
 
-	// getWordsFromDB();
+	// crawlerGetWordsFromDB();
 }
 
 main();
